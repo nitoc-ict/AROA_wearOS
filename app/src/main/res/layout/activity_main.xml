@@ -16,35 +16,54 @@
         android:padding="@dimen/inner_frame_layout_padding"
         app:layout_boxedEdges="all">
 
-        <EditText
-            android:id="@+id/TextTime"
-            android:layout_width="155dp"
-            android:layout_height="61dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="30dp"
-            android:ems="10"
-            android:gravity="center"
-            android:lineSpacingExtra="0sp"
-            android:text="@string/time_test"
-            android:textColor="#000000"
-            android:textSize="38dp" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@drawable/ic_baseline_add_24" />
+            android:src="@drawable/ic_baseline_add_24" />-->
 
-        <!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/extended_fab"
+            style="@style/Widget.Design.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
-            android:layout_gravity="bottom|right"
-            android:text="test"
-            app:icon="@drawable/ic_baseline_add_24"/>-->
+            android:text="@string/test"
+            android:textColor="#757575"
+            app:backgroundTint="#F3821A"
+            app:icon="@drawable/ic_baseline_add_24" />
+
+        <EditText
+            android:id="@+id/TextTime"
+            android:layout_width="155dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="30dp"
+            android:autofillHints="yes its test"
+            tools:ignore="LabelFor"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType=""
+            android:lineSpacingExtra="0sp"
+            android:text="@string/time_test"
+            android:textColor="#000000"
+            android:textSize="36sp" />
+
+        <!--<androidx.wear.widget.CircularProgressLayout
+            android:layout_width="65dp"
+            android:layout_height="62dp"
+            android:padding="4dp"
+            app:strokeWidth="4dp">
+
+        </androidx.wear.widget.CircularProgressLayout>-->
+
+       <!-- <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:contentDescription="@string/test" />-->
 
 
     </FrameLayout>
