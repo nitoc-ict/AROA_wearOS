@@ -23,27 +23,28 @@
             android:clickable="true"
             android:src="@drawable/ic_baseline_add_24" />-->
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/extended_fab"
             style="@style/Widget.Design.FloatingActionButton"
-            android:layout_width="wrap_content"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:text="@string/test"
-            android:textColor="#757575"
-            app:backgroundTint="#F3821A"
-            app:icon="@drawable/ic_baseline_add_24" />
+            android:layout_gravity="center|bottom"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_corners"
+            android:drawableStart="@drawable/ic_baseline_pause_24"
+            android:padding="12dp"
+            android:text="@string/teisi"
+             />
 
         <EditText
             android:id="@+id/TextTime"
             android:layout_width="155dp"
             android:layout_height="61dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:autofillHints="yes its test"
             tools:ignore="LabelFor"
             android:ems="10"
-            android:gravity="center"
+            android:gravity="center|left"
             android:inputType=""
             android:lineSpacingExtra="0sp"
             android:text="@string/time_test"

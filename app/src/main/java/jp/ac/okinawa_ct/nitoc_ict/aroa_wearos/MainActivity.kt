@@ -22,6 +22,7 @@ class MainActivity : Activity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        vibrateFunctionBase()
     }
 
     fun vibrateFunctionBase() {
@@ -30,8 +31,8 @@ class MainActivity : Activity() {
             val vibratorManager = this.getSystemService(VIBRATOR_MANAGER_SERVICE) as VibratorManager
             val vibrationEffect = VibrationEffect.createWaveform(
                 longArrayOf(500L, 500L), //timings : タイミング・振幅をミリ秒の配列で指定
-                intArrayOf(VibrationEffect.DEFAULT_AMPLITUDE, 0), //amplitudes : 上の配列の振幅値(0~255) 0はOFF
-                -1) //repeat : 繰り返しのタイミングを決める配列をintで選ぶ -1だと繰り返さない
+                intArrayOf(VibrationEffect.DEFAULT_AMPLITUDE, 10), //amplitudes : 上の配列の振幅値(0~255) 0はOFF
+                1) //repeat : 繰り返しのタイミングを決める配列をintで選ぶ -1だと繰り返さない
             val combineVibration = android.os.CombinedVibration.createParallel(vibrationEffect)
 
             //FABを押すと振動するようにしている...はず
@@ -48,8 +49,8 @@ class MainActivity : Activity() {
             val buttonPushed2 = findViewById<android.widget.Button>(R.id.extended_fab)
             buttonPushed2.setOnClickListener {
                 vibrator.vibrate(
-                    VibrationEffect.createOneShot(300,
-                        VibrationEffect.DEFAULT_AMPLITUDE
+                    VibrationEffect.createOneShot(300, //milliseconds
+                        VibrationEffect.DEFAULT_AMPLITUDE //amplitudes
                     ))
             }
 
